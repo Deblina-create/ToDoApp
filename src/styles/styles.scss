@@ -1,0 +1,55 @@
+header{
+    //margin-bottom: 20px;
+    .firstDiv{
+        margin-bottom: 60px;
+        h3{
+          text-align: center;
+          margin-top: 20px; ;
+        }
+        /*#buttonAddNewTask{
+            //color: ;
+        }*/
+    }
+}
+
+
+ 
+.secondHeading{
+
+    text-align: center;
+    padding: 3rem;
+    border-color: 1px solid black;
+    font-size: 25px;
+}
+
+.completedTaskList{
+    li:first-child {
+        background-color: #00CED1;
+        text-align: center;
+        font-size: large;
+        border: 1px solid gray;
+    }
+}
+
+#bottomSection{
+    //box-sizing: border-box;
+    border: 1px solid lightgray;
+    margin-top: 10px;
+}
+
+
+
+#myChart{
+   margin-left: 100px;
+   opacity: 0.8;
+
+}
+#chartHeading{
+    text-align: center;
+    border: 1px solid gray;
+    background-color: #00CED1;
+    width: 480px;
+    height: 65px;
+    padding-top: 10px;
+    font-size: large;
+}
