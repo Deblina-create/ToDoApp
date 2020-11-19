@@ -151,6 +151,7 @@ function createCard(task){
     actionIcon.classList.add("fa-check-circle");
     actionButton.appendChild(actionIcon);
     actionButton.addEventListener("click", function(){
+        
         console.log("In anonymous funtion");
         console.log(newTaskList);
         console.log(task);
@@ -163,6 +164,7 @@ function createCard(task){
         completedTaskList.push(task);
         localStorage.setItem("completedTaskList", JSON.stringify(completedTaskList));
         updateChartData();
+        console.log(task);
     });
     cardBody.appendChild(actionButton).after(" ");
     actionButton = document.createElement("button");
@@ -233,12 +235,16 @@ function changePriority(selectedPriorityNode, task, priorityToSet){
     let index = newTaskList.findIndex(function(taskInArray){
         return task.priority === taskInArray.priority && task.status === taskInArray.status && task.content === taskInArray.content;
     });
+    console.log(index);
+    
+    task.priority = priorityToSet;
     newTaskList[index].priority = priorityToSet;
     localStorage.setItem("newTaskList", JSON.stringify(newTaskList));
-    updateChartData();
+    updateChartData();      
 }
 
 function restoreCompletedTask(listItemToRestore, task){
+    console.log(task);
     listItemToRestore.parentNode.removeChild(listItemToRestore);
     createCard(task);
     let completedTaskList = JSON.parse(localStorage.getItem("completedTaskList"));
@@ -252,6 +258,7 @@ function restoreCompletedTask(listItemToRestore, task){
     task.status = "New";
     newTaskList.push(task);
     localStorage.setItem("newTaskList", JSON.stringify(newTaskList));
+    console.log(task);
 }
 
 
