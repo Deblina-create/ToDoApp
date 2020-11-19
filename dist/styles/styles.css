@@ -1,8 +1,5 @@
 header .firstDiv {
-  margin-bottom: 60px;
-  /*#buttonAddNewTask{
-            //color: ;
-        }*/ }
+  margin-bottom: 60px; }
   header .firstDiv h3 {
     text-align: center;
     margin-top: 20px; }
@@ -24,8 +21,7 @@ header .firstDiv {
   margin-top: 10px; }
 
 #myChart {
-  margin-left: 100px;
-  opacity: 0.8; }
+  margin-left: 100px; }
 
 #chartHeading {
   text-align: center;
